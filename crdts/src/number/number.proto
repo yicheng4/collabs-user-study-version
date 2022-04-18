@@ -1,3 +1,0 @@
-message CNumberComponentMessage {
-    required double arg = 1;
-}

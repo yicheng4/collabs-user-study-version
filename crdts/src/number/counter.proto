@@ -1,3 +1,0 @@
-message CCounterMessage {
-  optional sint64 arg = 1 [default = 1];
-}
