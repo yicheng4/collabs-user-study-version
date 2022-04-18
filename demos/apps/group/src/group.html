@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Semidirect Product Group demo</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <!-- HTML page title -->
+      Semidirect Product Group Demo
+
+      <!-- HTML page variables and buttons -->
+      <p></p>
+      <div class="btn-ops-1">
+        <p>CMU Image</p>
+        <button id="reflectX1">Reflect X-axis</button>
+        <button id="reflectY1">Reflect Y-axis</button>
+        <button id="rotateCW1">Rotate Clockwise</button>
+        <button id="rotateCCW1">Rotate Counter-Clockwise</button>
+        <input type="number" id="rotate-deg1" />
+      </div>
+
+      <div class="btn-ops-2">
+        <p>ISR Image</p>
+        <button id="reflectX2">Reflect X-axis</button>
+        <button id="reflectY2">Reflect Y-axis</button>
+        <button id="rotateCW2">Rotate Clockwise</button>
+        <button id="rotateCCW2">Rotate Counter-Clockwise</button>
+        <input type="number" id="rotate-deg2" />
+      </div>
+
+      <div class="btn-ops-3">
+        <p>Group</p>
+        <button id="reflectX3">Reflect X-axis</button>
+        <button id="reflectY3">Reflect Y-axis</button>
+        <button id="rotateCW3">Rotate Clockwise</button>
+        <button id="rotateCCW3">Rotate Counter-Clockwise</button>
+        <input type="number" id="rotate-deg3" />
+        <button id="translate3">Translate</button>
+        <input type="number" id="translateX3" placeholder="dX" />
+        <input type="number" id="translateY3" placeholder="dY" />
+      </div>
+    </div>
+
+    <div id="group">
+      <img src="ISR.jpeg" id="isr" onContextMenu="return false;" />
+      <img src="CMU.jpeg" id="cmu" onContextMenu="return false;" />
+    </div>
+  </body>
+
+  <style>
+    p {
+      display: inline-block;
+    }
+
+    #cmu {
+      width: 150px;
+      height: auto;
+      transform-origin: center;
+      position: absolute;
+      top: 300;
+      left: 0;
+    }
+
+    #isr {
+      width: 150px;
+      height: auto;
+      transform-origin: center;
+      position: absolute;
+      top: 300;
+      left: 0;
+    }
+  </style>
+</html>
