@@ -22,14 +22,15 @@ The following instructions indicate the steps that need to be followed to comple
 
 In the following paragraphs, we describe each step in detail and, in some steps, we provide commands that you need to execute to complete that step. 
 ### Download and install the template code.  
-  
-  `$ git clone https://github.com/yicheng4/collabs-user-study-version.git`  
-  `$ cd collabs-user-study-version/ckpt1`  
-  `$ npm i`  
-  `$ cd collabs-user-study-version/ckpt2`  
-  `$ npm i`  
-  `$ cd collabs-user-study-version/ckpt3`  
-  `$ npm i`  
+  ```
+  $ git clone https://github.com/yicheng4/collabs-user-study-version.git
+  $ cd collabs-user-study-version/ckpt1
+  $ npm i
+  $ cd collabs-user-study-version/ckpt2
+  $ npm i
+  $ cd collabs-user-study-version/ckpt3
+  $ npm i
+  ```
   The file you will work on are the ones in `src/` in each checkpoint folder.
 
 ### Implement the collaboration functionality in the template provided.
