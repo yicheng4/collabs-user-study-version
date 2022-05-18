@@ -1,4 +1,4 @@
-# collabs-user-study-version
+# User Experience Study for Collabs
 ## Background
 The Pittsburgh animal shelter wants to develop a system that can let them keep track of the different animals that they have. They are asking for you to develop a program that will let the staff collaboratively manage the animals.
 
