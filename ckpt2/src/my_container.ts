@@ -1,7 +1,5 @@
 import * as collabs from "@collabs/collabs";
-
 import { CRDTContainer } from "@collabs/container";
-import { Int } from "automerge";
 
 
 enum DogObedience {
@@ -11,32 +9,25 @@ enum DogObedience {
   GOOD = 3,
 }
 
-// TODO: Create something called "Dog" that has the properties that is contained in "Animal".
-// It has an extra variable that is called "obedience" that takes in "DogObedience"
-
-
-
-// TODO: Create something called "Cat" that has the properties from "Animal" in previous task.
-// It has an extra variable that is called "purrs" that takes in "booleans"
-
 
 
 (async function () {
   const container = new CRDTContainer();
   
 
-  // You can decleare global variables here
-
-  // Refresh the display when the Collab state changes, possibly
-  // due to a message from another replica.
-  // When refreshDisplay is called, data displayed on html page will be updated.
+  // TODO: Declare collaborative variables here. (You can also add things outside the async function)
+  
+  
   const display3 = document.getElementById("display3")!;
   const display1 = document.getElementById("display1")!;
   const display2 = document.getElementById("display2")!;
   function refreshDisplay() {
-    display1.innerHTML = "TODO: return the animal type(Cat or Dog) and status of its special feature (by whatever form you like).";
+    // This function is called when the Collab state changes, possibly
+    // due to a message from another replica.
+    
+    display1.innerHTML = "TODO: return the animal type (Cat or Dog) and status of its special feature (in whatever form you like).";
     display2.innerHTML = "TODO: return the animalName.";
-    display3.innerHTML = "TODO: return the hight of animal.";
+    display3.innerHTML = "TODO: return the height of animal.";
   }
   
 
@@ -45,23 +36,27 @@ enum DogObedience {
   const form: HTMLFormElement = <HTMLFormElement>document.querySelector('#myform');
   const radioButtons = document.querySelectorAll('input[name="Animal"]');
   form.onsubmit = () => {
+    let animal_kind! : number;
     for (const radioButton of radioButtons) {
       const buttons = <HTMLFormElement>radioButton;
       if (buttons.checked) {
-        var animal_kind = +buttons.value;
+        animal_kind = +buttons.value;
         break;
       }
     }
-    //animal_kind saves 1 if it is a Dog, saves 2 if it is a Cat.
+    
     
     
     const formData = new FormData(form);
-    var animal_name = formData.get('animal_name') as string;
+    let animal_name = formData.get('animal_name') as string;
     const height_string = formData.get('height') as string;
     if (animal_name.length === 0){
       animal_name = " ";
     }
+    const obedience = formData.get('dog_obedience') as string; // read the dog obedience value
+    const purrs = formData.get('cat_purrs') as string; // read the purrs value
     // animal_name contains the name of animal and height contains the hight of the animal
+    // animal_kind is 1 if it is a Dog, is 2 if it is a Cat.
     // TODO: apply new values to the animal shown on the screen and 
     // also change to the corresponding animal type
     

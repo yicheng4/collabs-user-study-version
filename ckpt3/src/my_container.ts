@@ -12,7 +12,7 @@ enum DogObedience {
   GOOD = 3,
 }
 
-//TODO: copy your task2 code here and find a place to define your list of animals.
+
 
 
 
@@ -20,21 +20,23 @@ enum DogObedience {
   const container = new CRDTContainer();
   
   
-  // You can decleare global variables here
+  // TODO: Declare collaborative variables here. (You can also add things outside the async function)
 
   
-    // Refresh the display when the Collab state changes, possibly
-  // due to a message from another replica.
+  
   const display3 = document.getElementById("display3")!;
   const display0 = document.getElementById("display0")!;
   const display1 = document.getElementById("display1")!;
   const display2 = document.getElementById("display2")!;
   
   function refreshDisplay() {
+    // This function is called when the Collab state changes, possibly
+    // due to a message from another replica.
+    // You may also need to call this function in other cases.
     display0.innerHTML = "TODO: return the list index (-1 for nothing in list)"
-    display1.innerHTML = "TODO: return the animal type(Cat or Dog) and status of its special feature (by whatever form you like).";
+    display1.innerHTML = "TODO: return the animal type (Cat or Dog) and status of its special feature (by whatever form you like).";
     display2.innerHTML = "TODO: return the animalName.";
-    display3.innerHTML = "TODO: return the hight of animal.";
+    display3.innerHTML = "TODO: return the height of animal.";
     
   }
   
@@ -43,9 +45,8 @@ enum DogObedience {
   
   const form: HTMLFormElement = <HTMLFormElement>document.querySelector('#myform');
   const radioButtons = document.querySelectorAll('input[name="Animal"]');
-  form.onsubmit = () => { //adding animal
-    console.log("click\n");
-    var animal_kind : number = 0;
+  form.onsubmit = () => { // adding animal
+    let animal_kind : number = 0;
     for (const radioButton of radioButtons) {
       const buttons = <HTMLFormElement>radioButton;
       if (buttons.checked) {
@@ -53,40 +54,48 @@ enum DogObedience {
         break;
       }
     }
-    //Animal_kind saves 1 if it is a Dog, saves 2 if it is a Cat.
+   
     
     const formData = new FormData(form);
-    var animal_name = formData.get('animal_name') as string;
+    let animal_name = formData.get('animal_name') as string;
     const height_string = formData.get('height') as string;
     if (animal_name.length === 0){
       animal_name = " ";
     }
-    //TODO: add an animal to your list
+    
     const obedience = formData.get('dog_obedience') as string; //read the dog obedience value
     const purrs = formData.get('cat_purrs') as string; //read the purrs value
-
+    // TODO: add an animal to your list
+    // animal_kind is 1 if it is a Dog, is 2 if it is a Cat.
+    // animal_name contains the name of animal and height contains the hight of the animal
+    
     return false; // prevent reload
   };
 
   const form1: HTMLFormElement = <HTMLFormElement>document.querySelector('#myform1');
   
-  form1.onsubmit = () => { //editting animal
+  form1.onsubmit = () => { // editing animal
     const formData = new FormData(form1);
-    var animal_name = formData.get('animal_name') as string;
+    let animal_name = formData.get('animal_name') as string;
     const height_string = formData.get('height') as string;
     if (animal_name.length === 0){
       animal_name = " ";
     }
-    //TODO: edit the animal that is shown on the screen.
+    
+
+    const obedience = formData.get('dog_obedience') as string; // read the new dog obedience value
+    const purrs = formData.get('cat_purrs') as string; // read the new purrs value
+
+    //TODO: edit the animal that is currently shown.
     
     return false; // prevent reload
   };
 
   document.getElementById("prev")!.onclick = () => {
-    //TODO: show the previous element on the list
+    // TODO: show the previous element on the list
   };
   document.getElementById("next")!.onclick = () => {
-    //TODO: show the next element on the list
+    // TODO: show the next element on the list
   };
   
 

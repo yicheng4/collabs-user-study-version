@@ -1,23 +1,21 @@
 import * as collabs from "@collabs/collabs";
-
 import { CRDTContainer } from "@collabs/container";
-import { Int } from "automerge";
-// TODO: design a thing that contains animal name and its height.
+
 
 
 (async function () {
   const container = new CRDTContainer();
 
-  //You can declare global variables here.
+  // TODO: Declare collaborative variables here. (You can also add things outside the async function)
 
-  // Refresh the display when the Collab state changes, possibly
-  // due to a message from another replica.
-  // When refreshDisplay is called, data displayed on html page will be updated
+  
   const display = document.getElementById("display")!;
   const display2 = document.getElementById("display2")!;
   function refreshDisplay() {
-    display.innerHTML = "TODO: call a function to return the animalName.";
-    display2.innerHTML = "TODO: call a function to return the hight of animal.";
+    // This function is called when the Collab state changes, possibly
+    // due to a message from another replica.
+    display.innerHTML = "TODO: return the animalName.";
+    display2.innerHTML = "TODO: return the height of animal.";
   }
 
   // When Collabs state changes, call refreshDisplay
@@ -28,7 +26,7 @@ import { Int } from "automerge";
     const formData = new FormData(form);
     const animal_name = formData.get('animal_name') as string;
     const height_string = formData.get('height') as string;
-    var height: number = +height_string;
+    let height: number = +height_string;
     // animal_name contains the name of animal and height contains the hight of the animal
     //TODO: apply new values to the animal
     
