@@ -1,7 +1,6 @@
 import * as collabs from "@collabs/collabs";
 
 import { CRDTContainer } from "@collabs/container";
-import { Int } from "automerge";
 
 
 
