@@ -1,10 +1,13 @@
-# Collabs template-container
+# Checkpoint 3
 
-Template for a Collabs container. Containers are network agnostic and can be run in any "host".
+Collabs container for checkpoint 3. Containers are network agnostic and can be run in any "host".
 
-[Guide](https://github.com/composablesys/collabs/tree/master/collabs/docs/getting_started_guide.md)
 
-See also [template-app](https://github.com/composablesys/collabs/tree/master/template-app).
+## Goal
+Now the animal shelter has multiple Dogs and Cats. Starting with an empty list of animals, users should be able to append any number of animals. 
+
+Also ensure that it’s possible for the animal shelter staff to update the `name`, `height`, and characteristics of individual animals (e.g., `obedience` and `purrs`). 
+Please demonstrate to the researcher that users can add at least 3 animals to the list.
 
 ## Installation
 
@@ -15,10 +18,6 @@ First, install [Node.js](https://nodejs.org/). Then run `npm i`.
 ### `npm run dev`
 
 Build the container from `src/`, in [development mode](https://webpack.js.org/guides/development/).
-
-### `npm run build`
-
-Build the container from `src/`, in [production mode](https://webpack.js.org/guides/production/) (smaller output files; longer build time; no source maps).
 
 ### `npm start`
 
@@ -32,16 +31,13 @@ Delete `dist/`.
 
 ## Starter Files
 
-- `src/`: Client-side app source files. If you rename the files in here, also rename their uses in `webpack.config.ts` and `package.json`.
-- `webpack.config.ts`: Webpack config for the client-side app.
-- `tsconfig.json`: TypeScript config for the client-side app.
+- `src/`: Client-side app source files. This will be files you will be working on. Please do not rename the file names.
+- `webpack.config.ts`: Webpack config for the client-side app (**you do not need to change this**).
+- `tsconfig.json`: TypeScript config for the client-side app (**you do not need to change this**).
 
-## Deployment
+## Hints
+In `async function ()` part, we’ve pointed out the variables where the frontend gets inputs. Please follow the comments and update (or fetch) the values in the data structures.  
 
-See the [Guide](https://github.com/composablesys/collabs/tree/master/collabs/docs/getting_started_guide.md) for deployment options. For the purpose of this study, please copy the files from `starter/` to `src/` for different task. When you finish a checkpoint, please save the file into `finished/` before copying new files into `src/`
+While working, you can test the code you have written so far. Checking the console would help you to debug. When you are updating the data, please update all the non-empty data read from the html form. If the form is empty, you can either update the data as an empty string or not change it.  
 
-## Licensing
-
-Coming soon: how to add license info and credits to your output file.
-
-Note that if you build your container as a single file with no external dependencies (recommended), then users can easily redistribute your container. Hence a permissive license is recommended.
+Fill in the `TODO`s in the template so that the animal’s `name` (i.e. Alice, Bob) and height (i.e. 3 inches) can be collaboratively edited. That way, the animal shelter staff can edit them on different devices!

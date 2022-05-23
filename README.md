@@ -1,6 +1,6 @@
 # User Experience Study for Collabs
 ## Background
-The Pittsburgh animal shelter wants to develop a system that can let them keep track of the different animals that they have. They are asking for you to develop a program that will let the staff collaboratively manage the animals.
+The Pittsburgh animal shelter wants to develop a system to keep track of the different animals that they have. They are asking for you to develop a program that will let the staff collaboratively manage the animals.
 
 The application is a web page that allows clients to update the same state concurrently on different devices. We’d like to have a list of animals, each of which has different attributes. There are two kinds of animals – cats and dogs. Users should be able to add, remove, and edit individual animals. The app does not allow users to add new kinds of animals.
 
@@ -31,19 +31,20 @@ In the following paragraphs, we describe each step in detail and, in some steps,
   $ cd collabs-user-study-version/ckpt3
   $ npm i
   ```
-  The file you will work on are the ones in `src/` in each checkpoint folder.
+  The file you will work on are the ones in `src/` in each checkpoint folder. (If you want to delete the package, see [Clean up](#clean-up-optional))
 
 ### Implement the collaboration functionality in the template provided.
-   
-In `async function ()` part, we’ve pointed out the variables where the frontend gets inputs. Please follow the comments and update (or fetch) the values in the data structures.  
-
-You can refer to the [project documentation](https://collabs.readthedocs.io/en/latest/). If you have any questions, please feel free to ask the researcher.   
-
-While working, you can test the code you have written so far by following the instructions [below](#launch-the-collaborative-website). Checking the console would help you to debug. When you are updating the data, please update all the non-empty data read from the html form. If the form is empty, you can either update the data as an empty string or not change it.  
 
 When you finish a checkpoint, please let the researcher know. If you are planning to start writing code, please describe to the researcher the approach that you’d like to take before you get started.  
 
+You can refer to the [project documentation](https://collabs.readthedocs.io/en/latest/). If you have any questions, please feel free to ask the researcher.   
+
 #### Checkpoint1:
+
+In `async function ()` part, we’ve pointed out the variables where the frontend gets inputs. Please follow the comments and update (or fetch) the values in the data structures.  
+
+
+While working, you can test the code you have written so far by following the instructions [below](#launch-the-collaborative-website). Checking the console would help you to debug. When you are updating the data, please update all the non-empty data read from the html form. If the form is empty, you can either update the data as an empty string or not change it.  
 Fill in the TODOs in the template so that the animal’s `name` (i.e. Alice, Bob) and height (i.e. 5 inches) can be collaboratively edited. That way, the animal shelter staff can edit them on different devices!
 
 At checkpoint1, we only have one animal and we would like the animal shelter staff to be able to update its `name` and `height`.
@@ -51,7 +52,7 @@ At checkpoint1, we only have one animal and we would like the animal shelter sta
 #### Checkpoint2:
 We now have two kinds of animals in the animal shelter, Dog and Cat.
 
-The Dog has an `obedience` value with type `DogObedience` (defined in the code we provided) and Cat has a `purrs` value which is a `Boolean`. We’d like the animal’s name (i.e. Alice, Bob) and height (i.e. 5 inches), and the characteristics of Dog or Cat (like `obedience` and `purrs`) to be collaboratively editable so that the animal shelter staff can edit them on different devices!
+The Dog has an `obedience` value with type `DogObedience` (defined in the code we provided) and Cat has a `purrs` value which is a `boolean`. We’d like the animal’s name (i.e. Alice, Bob) and height (i.e. 5 inches), and the characteristics of Dog or Cat (like `obedience` and `purrs`) to be collaboratively editable so that the animal shelter staff can edit them on different devices!
 
 For the front-end, we still have only one animal so far. The users can collaboratively change its name, its type (whether it is a Dog or Cat), and its characteristics (like `obedience` and `purrs`)
 
@@ -65,8 +66,7 @@ Please demonstrate to the researcher that users can add at least 3 animals to th
 `cd` into the checkpoint folders  
 `$ npm run dev`  
 `$ npm start`  
-Open the website shown in the command line. You can test it in multiple tabs/windows to see if you can collaboratively launch it.
- 
+Open the website shown in the command line. You can test it in multiple tabs/windows to see if you can use it collabortively.
 ### Clean up (Optional)
 If you'd like to clean up the packages:  
 `cd` into the checkpoint folders  
