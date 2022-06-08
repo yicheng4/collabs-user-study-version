@@ -27,9 +27,11 @@ In the following paragraphs, we describe each step in detail and, in some steps,
   $ git clone https://github.com/yicheng4/collabs-user-study-version.git
   $ cd collabs-user-study-version/ckpt1
   $ npm i
-  $ cd collabs-user-study-version/ckpt2
+  $ cd ..
+  $ cd ckpt2
   $ npm i
-  $ cd collabs-user-study-version/ckpt3
+  $ cd ..
+  $ cd ckpt3
   $ npm i
   ```
  The files you will work on are` ckpt1/src/my_container.ts`,  `ckpt2/src/my_container.ts`, and
