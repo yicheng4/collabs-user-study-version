@@ -2,16 +2,17 @@
 ## Background
 The Pittsburgh animal shelter wants to develop a system to keep track of the different animals that they have. They are asking for you to develop a program that will let the staff collaboratively manage the animals.
 
-The application is a web page that allows clients to update the same state concurrently on different devices. We’d like to have a list of animals, each of which has different attributes. There are two kinds of animals – cats and dogs. Users should be able to add, remove, and edit individual animals. The app does not allow users to add new kinds of animals.
+The application is a web page that allows clients to update the same state concurrently on different devices. We’d like to have a list of animals, each of which has different attributes. There are two kinds of animals – cats and dogs. Users should be able to add and edit individual animals. The app does not allow users to add new kinds of animals.
 
-You have an HTML document and a sketch of how this might work in Typescript, but the part of the code that takes care of collaboration is not yet implemented. You must complete this program so that animals can be collaboratively added, removed, and edited.
+You have an HTML document and a sketch of how this might work in Typescript, but the part of the code that takes care of collaboration is not yet implemented. You must complete this program so that animals can be collaboratively added and edited.
+
 
 ## What to do
 For this task, you'll need to do the following:  
 - Implement the collaboration functionality in the template provided.  
 - Run the web page and ensure that different users can add/edit individual animals concurrently.
  
-To assist you in this task, we've provided you with simplified instructions for launching the app using the Collabs library. If you have any questions, please ask the researchers.
+To assist you in this task, we've provided you with simplified instructions for launching the app using the Collabs library. If you have any questions, please ask researchers.
 ## Task
 
 The following instructions indicate the steps that need to be followed to complete the task:
