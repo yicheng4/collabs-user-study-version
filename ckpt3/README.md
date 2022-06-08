@@ -4,9 +4,12 @@ Collabs container for checkpoint 3. Containers are network agnostic and can be r
 
 
 ## Goal
-Now the animal shelter has multiple Dogs and Cats. Starting with an empty list of animals, users should be able to append any number of animals. 
+Now the animal shelter construction is finished and can have multiple Dogs and Cats. Starting with an empty collection of animals, users should be able to append any number of animals. Keep in mind that this collection should be collaborative as well! 
 
-Also ensure that it’s possible for the animal shelter staff to update the `name`, `height`, and characteristics of individual animals (e.g., `obedience` and `purrs`). 
+Make sure that it’s possible for the animal shelter staff to update the `name`, `height`, and characteristics of individual animals (e.g., `obedience` and `purrs`). 
+
+Now that we have multiple animals stored in our app, we would like the DOM to be updated appropriately. For example, when the animal shelter staff change the index they are looking at (flipping page), you should update the DOM.
+
 Please demonstrate to the researcher that users can add at least 3 animals to the list.
 
 ## Installation

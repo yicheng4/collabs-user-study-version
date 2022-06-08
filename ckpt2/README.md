@@ -36,9 +36,3 @@ Delete `dist/`.
 - `webpack.config.ts`: Webpack config for the client-side app (**you do not need to change this**).
 - `tsconfig.json`: TypeScript config for the client-side app (**you do not need to change this**).
 
-## Hints
-In `async function ()` part, we’ve pointed out the variables where the frontend gets inputs. Please follow the comments and update (or fetch) the values in the data structures.  
-
-While working, you can test the code you have written so far. Checking the console would help you to debug. When you are updating the data, please update all the non-empty data read from the html form. If the form is empty, you can either update the data as an empty string or not change it.  
-
-Fill in the `TODO`s in the template so that the animal’s `name` (i.e. Alice, Bob) and height (i.e. 3 inches) can be collaboratively edited. That way, the animal shelter staff can edit them on different devices!

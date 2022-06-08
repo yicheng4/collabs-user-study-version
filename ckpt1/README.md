@@ -3,7 +3,12 @@
 Collabs container for checkpoint 1. Containers are network agnostic and can be run in any "host".
 
 ## Goal
-At checkpoint1, we only have one animal and we would like the animal shelter staff to be able to update its `name` and `height`.
+To begin, we need a data structure representing the animal that we’d like for our app to store, of course using the `collabs` package. So start by defining a class that would model one instance of an animal, and which is able to construct all of the fields you believe will be required for each animal.
+
+Once this class representing the animal is defined, you can add it to the application by instantiating it and manipulating it inside of `async function ()`. Here, we would like to collect user inputs from the HTML form and update the states of the animal. Finally, in order for the user to see these updates, we must display these fields in the DOM. Note updates must be visible in the DOM whether the updates are made in the local replica or if updates come in from remote replicas.
+
+Please create the appropriate `Collab`s and fill in the TODOs in `ckpt1/src/my_container.ts`  so that the animal’s `name` (i.e. Alice, Bob) and `height` (i.e. 5 inches) can be collaboratively edited. That way, the animal shelter staff can edit them on different devices!
+At checkpoint1, we only have one animal and the animal shelter staff should be able to update its `name` and `height`.
 
 ## Installation
 
@@ -31,9 +36,3 @@ Delete `dist/`.
 - `webpack.config.ts`: Webpack config for the client-side app (**you do not need to change this**).
 - `tsconfig.json`: TypeScript config for the client-side app (**you do not need to change this**).
 
-## Hints
-In `async function ()` part, we’ve pointed out the variables where the frontend gets inputs. Please follow the comments and update (or fetch) the values in the data structures.  
-
-While working, you can test the code you have written so far. Checking the console would help you to debug. When you are updating the data, please update all the non-empty data read from the html form. If the form is empty, you can either update the data as an empty string or not change it.  
-
-Fill in the `TODO`s in the template so that the animal’s `name` (i.e. Alice, Bob) and height (i.e. 3 inches) can be collaboratively edited. That way, the animal shelter staff can edit them on different devices!

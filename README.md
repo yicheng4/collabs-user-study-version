@@ -9,16 +9,16 @@ You have an HTML document and a sketch of how this might work in Typescript, but
 ## What to do
 For this task, you'll need to do the following:  
 - Implement the collaboration functionality in the template provided.  
-- Run the web page and ensure that different users can concurrently add/remove/edit individual animals.
+- Run the web page and ensure that different users can add/edit individual animals concurrently.
  
-To assist you in this task, we've provided you with simplified instructions for launching the app using the `Collabs` library. If you have any questions, please ask the researchers.
+To assist you in this task, we've provided you with simplified instructions for launching the app using the Collabs library. If you have any questions, please ask the researchers.
 ## Task
 
 The following instructions indicate the steps that need to be followed to complete the task:
 
 - Download the template code.  
 - Implement the collaboration functionality in the template provided.  
-- Launch the collaborative app and ensure that different users can concurrently add/remove/edit individual animals.
+- Launch the collaborative app and ensure that different users can add/edit individual animals concurrently.
 
 In the following paragraphs, we describe each step in detail and, in some steps, we provide commands that you need to execute to complete that step. 
 ### Download and install the template code.  
@@ -31,42 +31,52 @@ In the following paragraphs, we describe each step in detail and, in some steps,
   $ cd collabs-user-study-version/ckpt3
   $ npm i
   ```
-  The file you will work on are the ones in `src/` in each checkpoint folder. (If you want to delete the package, see [Clean up](#clean-up-optional))
+ The files you will work on are` ckpt1/src/my_container.ts`,  `ckpt2/src/my_container.ts`, and
+ `ckpt3/src/my_container.ts`.
+
 
 ### Implement the collaboration functionality in the template provided.
+You can refer to the [project documentation](https://collabs.readthedocs.io/en/latest/). If you have any questions, please feel free to ask the researcher.   
+
+While working, you can test the code you have written so far by following the instructions [below](#launch-the-collaborative-website). Checking the console would help you to debug. 
 
 When you finish a checkpoint, please let the researcher know. If you are planning to start writing code, please describe to the researcher the approach that you’d like to take before you get started.  
 
-You can refer to the [project documentation](https://collabs.readthedocs.io/en/latest/). If you have any questions, please feel free to ask the researcher.   
 
 #### Checkpoint1:
 
-In `async function ()` part, we’ve pointed out the variables where the frontend gets inputs. Please follow the comments and update (or fetch) the values in the data structures.  
+To begin, we need a data structure representing the animal that we’d like for our app to store, of course using the `collabs` package. So start by defining a class that would model one instance of an animal, and which is able to construct all of the fields you believe will be required for each animal.
 
+Once this class representing the animal is defined, you can add it to the application by instantiating it and manipulating it inside of `async function ()`. Here, we would like to collect user inputs from the HTML form and update the states of the animal. Finally, in order for the user to see these updates, we must display these fields in the DOM. Note updates must be visible in the DOM whether the updates are made in the local replica or if updates come in from remote replicas.
 
-While working, you can test the code you have written so far by following the instructions [below](#launch-the-collaborative-website). Checking the console would help you to debug. When you are updating the data, please update all the non-empty data read from the html form. If the form is empty, you can either update the data as an empty string or not change it.  
-Fill in the TODOs in the template so that the animal’s `name` (i.e. Alice, Bob) and height (i.e. 5 inches) can be collaboratively edited. That way, the animal shelter staff can edit them on different devices!
+Please create the appropriate `Collab`s and fill in the TODOs in `ckpt1/src/my_container.ts`  so that the animal’s `name` (i.e. Alice, Bob) and `height` (i.e. 5 inches) can be collaboratively edited. That way, the animal shelter staff can edit them on different devices!
+At checkpoint1, we only have one animal and the animal shelter staff should be able to update its `name` and `height`.
 
-At checkpoint1, we only have one animal and we would like the animal shelter staff to be able to update its `name` and `height`.
 
 #### Checkpoint2:
 We now have two kinds of animals in the animal shelter, Dog and Cat.
 
-The Dog has an `obedience` value with type `DogObedience` (defined in the code we provided) and Cat has a `purrs` value which is a `boolean`. We’d like the animal’s name (i.e. Alice, Bob) and height (i.e. 5 inches), and the characteristics of Dog or Cat (like `obedience` and `purrs`) to be collaboratively editable so that the animal shelter staff can edit them on different devices!
+The Dog has an `obedience` value with the type `DogObedience` (defined in the code we provided) and Cat has a purrs value which is a `Boolean`. We’d like the animal’s name (i.e. Alice, Bob) and height (i.e. 5 inches), and the characteristics of Dog or Cat (like `obedience` and `purrs`) to be collaboratively editable so that the animal shelter staff can edit them on different devices!
 
-For the front-end, we still have only one animal so far. The users can collaboratively change its name, its type (whether it is a Dog or Cat), and its characteristics (like `obedience` and `purrs`)
+Although there are two types of animals, the animal shelter can only have one animal at a time for checkpoint2 (because the shelter is still under construction). The users can collaboratively change the animal name, its type (whether it is a Dog or Cat), and its characteristics (like `obedience` and `purrs`)
+
 
 #### Checkpoint3:
-Now the animal shelter has multiple Dogs and Cats. Starting with an empty list of animals, users should be able to append any number of animals. 
+Now the animal shelter construction is finished and can have multiple Dogs and Cats. Starting with an empty collection of animals, users should be able to append any number of animals. Keep in mind that this collection should be collaborative as well! 
 
-Also ensure that it’s possible for the animal shelter staff to update the `name`, `height`, and characteristics of individual animals (e.g., `obedience` and `purrs`). 
+Make sure that it’s possible for the animal shelter staff to update the `name`, `height`, and characteristics of individual animals (e.g., `obedience` and `purrs`). 
+
+Now that we have multiple animals stored in our app, we would like the DOM to be updated appropriately. For example, when the animal shelter staff change the index they are looking at (flipping page), you should update the DOM.
+
 Please demonstrate to the researcher that users can add at least 3 animals to the list.
 
+
 ### Launch the collaborative website
-`cd` into the checkpoint folders  
-`$ npm run dev`  
-`$ npm start`  
-Open the website shown in the command line. You can test it in multiple tabs/windows to see if you can use it collabortively.
+  `cd` into `ckpt1/` or (`ckpt2/` or `ckpt3/`)  
+  `$ npm run dev`  
+  `$ npm start`  
+
+Open the website shown in the command line. You can test it in multiple tabs/windows to see if you can use it collaboratively.
 ### Clean up (Optional)
 If you'd like to clean up the packages:  
 `cd` into the checkpoint folders  
