@@ -39,7 +39,7 @@ In the following paragraphs, we describe each step in detail and, in some steps,
 
 
 ### Implement the collaboration functionality in the template provided.
-You can refer to the [project documentation](https://collabs.readthedocs.io/en/latest/). If you have any questions, please feel free to ask the researcher.   
+You can refer to the [project documentation](https://collabs--223.org.readthedocs.build/en/223/). If you have any questions, please feel free to ask the researcher.   
 
 While working, you can test the code you have written so far by following the instructions [below](#launch-the-collaborative-website). Checking the console would help you to debug. 
 
