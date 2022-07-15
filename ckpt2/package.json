@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "@collabs/collabs": "0.5.x",
-    "@collabs/container": "0.5.x"
+    "@collabs/collabs": "0.6.x",
+    "@collabs/container": "0.6.x"
   },
   "devDependencies": {
     "@collabs/container-testing-server": "0.5.x",
